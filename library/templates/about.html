@@ -1,1 +1,64 @@
-<h1>about us</h1>
+{% comment %} 
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<body class="bg-gray-100">
+
+    <!-- Page Heading -->
+    <div class="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-gray-800 text-center">Library Book Information</h2>
+        <p class="text-lg text-gray-600 text-center mt-2">Details of the submitted book information are listed below:</p>
+    </div>
+
+    <!-- Table to Display Submitted Data -->
+    <div class="max-w-5xl mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <table class="min-w-full table-auto border-collapse">
+            <thead>
+                <tr>
+                    <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Field</th>
+                    <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Value</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Book Name</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ book_name }}</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Author Name</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ author_name }}</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Published Year</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ published }}</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Purchase</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ purchase }}</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Price</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ price }}</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Quantity</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ quantity }}</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b border-gray-200">Sales</td>
+                    <td class="px-6 py-4 border-b border-gray-200">{{ sales }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+    
+{% endblock content %}
+     {% endcomment %}

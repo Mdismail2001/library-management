@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Signup Form Section -->
+    <div class="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Create an Account</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            
+            <!-- First Name Field -->
+            <div class="mb-4">
+                <label for="id_first_name" class="block text-gray-700 font-medium">First Name</label>
+                {{ form.first_name }}
+            </div>
+
+            <!-- Last Name Field -->
+            <div class="mb-4">
+                <label for="id_last_name" class="block text-gray-700 font-medium">Last Name</label>
+                {{ form.last_name }}
+            </div>
+
+            <!-- Email Address Field -->
+            <div class="mb-4">
+                <label for="id_email" class="block text-gray-700 font-medium">Email Address</label>
+                {{ form.email_address }}
+            </div>
+
+            <!-- Username Field -->
+            <div class="mb-4">
+                <label for="id_username" class="block text-gray-700 font-medium">Username</label>
+                {{ form.user_name }}
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+                <label for="id_password" class="block text-gray-700 font-medium">Password</label>
+                {{ form.password }}
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6">
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign Up</button>
+            </div>
+
+            <!-- Already have an account -->
+            <div class="text-center mt-4">
+                <p class="text-gray-600">Already have an account? 
+                    <a href="" class="text-indigo-600 hover:text-indigo-500">Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
